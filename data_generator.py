@@ -50,5 +50,8 @@ if __name__ == '__main__':
         dataset_dir, 'train',
         30000, args.max_len, args.vocab_size)
     generate_dataset(
+        dataset_dir, 'valid',
+        8000, args.max_len, args.vocab_size)
+    generate_dataset(
         dataset_dir, 'test',
         8000, args.max_len, args.vocab_size)
