@@ -100,4 +100,4 @@ class ReversingModel(BaseModel):
         attn_outputs = sequence_dict['attn']
         attn_outputs_relevant = attn_outputs[:length]
 
-        return tgt_seq, torch.cat([attn_output for attn_output in attn_outputs_relevant]).cpu().numpy()
+        return tgt_seq, torch.cat([attn_output for attn_output in attn_outputs_relevant]).cpu().numpy() if  self.attention else None

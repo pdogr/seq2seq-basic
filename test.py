@@ -54,9 +54,10 @@ def main(config, model_path):
 
         tgt_seq, attn_weights = model.predict(seq)
         print(tgt_seq)
-        fig = sns.heatmap(attn_weights, xticklabels=seq, yticklabels=tgt_seq)
-        fig.xaxis.set_label_position('top')
-        fig.figure.show()
+        if attn_weights is not None:
+            fig = sns.heatmap(attn_weights, xticklabels=seq, yticklabels=tgt_seq)
+            fig.xaxis.set_label_position('top')
+            fig.figure.show()
 
 
 if __name__ == '__main__':
