@@ -5,7 +5,7 @@ import numpy as np
 
 class BaseModel(nn.Module):
     def __init__(self):
-        super(BaseModel,self).__init__()
+        super(BaseModel, self).__init__()
         self._trainable_params = None
 
     @property
